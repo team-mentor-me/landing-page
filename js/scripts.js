@@ -10,6 +10,6 @@ sectionTab.forEach(tab => {
 	    let bottomNav = el.parentElement;
 	    let contentTabId = el.getAttribute('href');
 		let contentTabEl = document.querySelectorAll(contentTabId)[0]
-		bottomNav.style.transform = `translateY((-${contentTabEl.offsetHeight})px)`;
+		bottomNav.style.transform = `translateY((-${contentTabEl.offsetHeight}+79)px)`;
 	})
 })
