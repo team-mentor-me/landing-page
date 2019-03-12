@@ -1,0 +1,40 @@
+@import './variables';
+@import './mixins';
+//@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: white;//@mentorme-gradient-background;
+  //background: red;
+  color: @mentorme-color-primary;
+  font-family: "Century Gothic", "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  text-decoration: none;
+  color: @mentorme-color-black;
+
+}
+
+.mk_container{
+  margin:0 auto;
+}
+
+@import '../components/common/Navigations/Navigations';
+@import '../components/common/Footer/Footer';
+@import '../components/Carousel/Carousel';
+@import '../components/SectionHero/SectionHero';
+@import '../components/SectionAbout/SectionAbout';
+@import '../components/SectionBecomeAMentor/SectionBecomeAMentor';
