@@ -240,6 +240,7 @@ footer {
   padding-top: 30px;
 }
 .tab-content .member-card-container {
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
@@ -288,7 +289,7 @@ footer {
   color: white;
   font-weight: bold;
   background: linear-gradient(82deg, rgba(85, 116, 247, 0.7), rgba(96, 195, 255, 0.7));
-  padding: 4px 14px;
+  padding: 4px 8px;
   border-radius: 2px;
   font-size: 12px;
 }
