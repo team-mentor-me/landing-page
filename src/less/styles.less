@@ -32,9 +32,28 @@ a {
   margin:0 auto;
 }
 
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+
 @import '../components/common/Navigations/Navigations';
 @import '../components/common/Footer/Footer';
-@import '../components/SectionHero/SectionHero';
+@import '../components/TabContent/SectionHero';
 @import '../components/TabContent/TabContentContainer';
 @import '../components/TabContent/SectionAbout';
 @import '../components/TabContent/SectionGallery';

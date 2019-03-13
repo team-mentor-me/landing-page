@@ -27,6 +27,21 @@ a {
 .mk_container {
   margin: 0 auto;
 }
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
 header {
   height: 78px;
   background: white;
@@ -250,6 +265,13 @@ footer {
 }
 .tab-content .member-card-container .member-card .social-bar i {
   margin: 0 10px;
+}
+.tab-content .member-card-container .member-card .social-bar a {
+  transition: all 0.3s ease;
+}
+.tab-content .member-card-container .member-card .social-bar a:hover {
+  color: #5887F9;
+  transform: scale(1.4);
 }
 .tab-content .member-card-container .member-card img {
   width: 150px;

@@ -1,5 +1,6 @@
 ## MentorMe App Landing page
 ---------------
+#####Live Demo can be found here: https://team-mentor-me.github.io/mentor-me-landing/
 
 ### How to Build the Project
 1. Check out the repository

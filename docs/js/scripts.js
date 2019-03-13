@@ -14,3 +14,7 @@ sectionTab.forEach(tab => {
 		//bottomNav.style.transform = `translateY((-${contentTabEl.offsetHeight}+79+56)px)`;
 	})
 })
+
+
+// TOOLTIPS
+
