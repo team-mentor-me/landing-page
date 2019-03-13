@@ -38,7 +38,7 @@
   }
 
   img {
-    transform: scale(0.8);
+
     transition: all .3s ease;
   }
   .showImg{
@@ -50,21 +50,23 @@
     display: flex;
     justify-content: space-around;
   }
+}
 
-  .img-container{
-    width: 100%;
-    display: flex;
-    transition: all 0.3s ease;
-    transform: translate(0, 0);
-    justify-content: center;
-    overflow:hidden;
-    .card{
-      border-radius: 10px;
-      margin: 20px;
-      box-shadow: 5px 10px 18px #444;
-      transform: scale(0.8);
 
-    }
+.img-container{
+  width: 100%;
+  display: flex;
+  transition: all 0.3s ease;
+  transform: translate(0, 0);
+  justify-content: center;
+  min-width: 410px;
+  overflow:hidden;
+
+  .card{
+    border-radius: 10px;
+    //margin: 20px;
+    box-shadow: 5px 10px 18px #444;
+    transform: scale(0.9);
   }
 }
 

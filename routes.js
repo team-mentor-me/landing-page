@@ -8,4 +8,9 @@ module.exports = function(app) {
         res.render('index.html', {msg: "Rashid website"})
     });
 	
+    app.get('/about', function(req, res){
+        //res.render('index', {msg: "Under Construction", usernam: "tester"})
+        res.render('about.html', {msg: "Rashid website"})
+    });
+	
 }
