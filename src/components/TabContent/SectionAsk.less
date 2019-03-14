@@ -1,18 +1,26 @@
-.tab-content-ask{
-    display: flex;
-    align-items: center;
-    .tab-content-ask-photo{
-      max-height: 320px;
-    }
-    .tab-content-ask-body{
-       display: flex;
-       flex-direction: column;
-       padding-bottom: 4px;
-       p{
-          padding: 0 2em;
-          line-height: 1.2;
-       }
-    }
+.tab-content-container .tab-content {
+  padding-top: 40px;
+
+  &.tab-content-ask{
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      flex-direction: column;
+      img {
+        height: auto;
+        max-width: 800px;
+      }
+      .tab-content-ask-body{
+         display: flex;
+         flex-direction: column;
+         padding-bottom: 4px;
+         p{
+            padding: 0 2em;
+            line-height: 1.2;
+            color: white;
+         }
+      }
+  }
 }
 
 

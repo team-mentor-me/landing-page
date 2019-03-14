@@ -1,5 +1,5 @@
 header{
-    height: 78px;
+    height: 75px;
     background: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     display:flex;
@@ -9,15 +9,20 @@ header{
     left: 0;
     right: 0;
     padding: 2px 1em 0  1em;
-    z-index: 2;
+    z-index: 20;
     .mk_header__logo{
-
+        transition:all 0.3s ease;
         img{
-            width:75px;
-            height:75px;
-            border-radius: 10%;
-
+            width:72px;
+            height:72px;
             color:white;
+        }
+        &:hover{
+             transform:translateX(8px);
+
+            //-webkit-animation: glow 1s ease-in-out infinite alternate;
+            //-moz-animation: glow 1s ease-in-out infinite alternate;
+            //animation: glow 1s ease-in-out infinite alternate;
         }
     }
     .nav-item-login{
@@ -26,9 +31,11 @@ header{
         border-radius: 6px;
         padding: 12px 15px;
         color: white;//@mentorme-color-primary;//@mentorme-color-darkgrey;
-
         i{
             margin-left: 8px;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
         }
     }
 
@@ -41,19 +48,62 @@ header{
     }
 }
 
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px @mentorme-color-primary, 0 0 40px @mentorme-color-primary, 0 0 50px @mentorme-color-primary, 0 0 60px @mentorme-color-primary, 0 0 70px @mentorme-color-primary;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px @mentorme-color-primary, 0 0 40px @mentorme-color-primary, 0 0 50px @mentorme-color-blue, 0 0 60px @mentorme-color-primary, 0 0 70px @mentorme-color-primary, 0 0 80px @mentorme-color-blue;
+    }
+}
+
+// Bottom Nav
 .bottom-nav{
+    position: absolute;
     display: flex;
     justify-content: space-around;
     align-items:center;
-    position:absolute;
     width: 100%;
     height: 75px;
-    bottom: 0;
+    bottom: 0px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     background: white;
     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: 10;
+
+    &.top-position{
+        top:75px;
+        position:fixed;
+    }
     a{
         font-weight: bolder;
         font-size: 0.9rem;
+        height:75px;
     }
+
+    .section-tab{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        color: #000;
+        letter-spacing: 0.1rem;
+        transition: all 0.5s ease;
+        font-size: 0.8rem;
+        &:hover {
+            color:white;
+            background: rgba(102,177,241,0.8);
+            transition: all 0.5s ease;
+        }
+    }
+    .section-tab-active {
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 6px;
+        background:@mentorme-gradient-background;
+        transition: all 0.3s ease;
+    }
+
+
 }

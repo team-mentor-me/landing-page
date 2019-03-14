@@ -6,8 +6,8 @@ class StickyNavigation {
 		this.tabContainerHeight = 70;
 		this.lastScroll = 0;
 		let self = this;
-		$('.et-hero-tab').click(function() { 
-			self.onTabClick(event, $(this)); 
+		$('.et-hero-tab').click(function() {
+			self.onTabClick(event, $(this));
 		});
 		$(window).scroll(() => { this.onScroll(); });
 		$(window).resize(() => { this.onResize(); });
@@ -21,7 +21,7 @@ class StickyNavigation {
 	
 	onScroll() {
 		this.checkHeaderPosition();
-    this.findCurrentTabSelector();
+		this.findCurrentTabSelector();
 		this.lastScroll = $(window).scrollTop();
 	}
 	
@@ -43,7 +43,7 @@ class StickyNavigation {
 			$('.et-header').addClass('et-header--move-up');
 			$('.et-hero-tabs-container').removeClass('et-hero-tabs-container--top-first');
 			$('.et-hero-tabs-container').addClass('et-hero-tabs-container--top-second');
-		} 
+		}
 		else if($(window).scrollTop() < this.lastScroll && $(window).scrollTop() > offset) {
 			$('.et-header').removeClass('et-header--move-up');
 			$('.et-hero-tabs-container').removeClass('et-hero-tabs-container--top-second');

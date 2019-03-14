@@ -1,8 +1,6 @@
 
 
 .tab-content-container{
-	//padding:1em 0;
-	//bottom:0;
 	height:calc(100vh - 56px);
 	min-width: 300px;
 	@media screen and (min-width: 300px) {
@@ -10,6 +8,7 @@
 	}
 	.tab-content  {
 		width:100%;
+		height:100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -20,7 +19,6 @@
 		padding:0 1.2em;
 		color:@mentorme-color-darkgrey;
 		background : linear-gradient(82deg, rgba(@mentorme-color-primary, 0.6), rgba(#5574F7, 0.6), rgba(#60C3FF, 0.8), rgba(@mentorme-color-primary, 0.8) );
-
 
 		.img-container{
 			display: flex;
@@ -34,7 +32,6 @@
 				@media screen and (min-width: 300px) {
 					margin-left: 0;
 				}
-
 			}
 		}
 
@@ -56,6 +53,11 @@
 			background: white;
 			color: @mentorme-color-primary;
 			font-weight: bold;
+
+			&.blue{
+				color: white;
+				background-color: @mentorme-color-primary;
+			}
 		}
 	}
 }
