@@ -8,3 +8,38 @@
 @mentorme-color-lightgrey:#E2E8ED;
 
 @mentorme-gradient-background: linear-gradient(82deg, @mentorme-color-blue, @mentorme-color-purple);
+
+// Mobile var
+@md:~"(min-width:300px)";
+@mdm:~"(min-width:450px)";
+@mdl:~"(min-width:600px)";
+@lg:~"(min-width:780px)";
+@lgm:~"(min-width:950px)";
+@xlg:~"(min-width:1200px)";
+
+// Small Size
+@headerHeight:76px;
+@bottomHeight:76px;
+@activeTabHeight:0;
+@browserMenuHeight: 56px;
+@marginOffsetOneRow: @headerHeight;
+@marginOffsetTwoRow: @headerHeight + @bottomHeight;
+
+@full-height: calc(100vh - @headerHeight - @bottomHeight);
+@full-height-mobile: calc(@full-height - @browserMenuHeight);
+
+// Medium Size
+@headerHeight-md:76px;
+@bottomHeight-md:76px;
+@activeTabHeight-md:6px;
+
+@full-height: calc(100vh - @logoHeight-md - @tabHeight-md + @activeTabHeight-md);
+
+
+// Lg Size
+@logoHeight-md:76px;
+@tabHeight-md:76px;
+@activeTabHeight-md:6px;
+
+@full-height: calc(100vh - @logoHeight-md - @tabHeight-md + @activeTabHeight-md);
+

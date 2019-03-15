@@ -1,24 +1,26 @@
-#tab-content-mentor {
+.gallery-card-container {
     background:white;
-}
-  .gallery-card-container {
-    margin-top: calc(76px);
+    margin-top: @marginOffsetOneRow;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-content: center;
+    //overflow-x: hidden;
+    width: 100%;
+
     .gallery-card {
       display: flex;
-      //justify-content: center;
       flex-direction: column;
       margin: 4px;
       padding-bottom: 20px;
       border-radius: 6px;
-      max-width: 500px;
+      width: 100%;
+      @media @md{
+
+      }
       img {
-        max-height: 300px;
-        height: auto;
-        width: auto;
+        height: 100%;
+        max-width: 300px;
       }
       .gallery-card-meta {
         color: white;

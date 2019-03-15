@@ -1,27 +1,26 @@
 @import './variables';
 @import './mixins';
-//@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
-
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 html, body {
   margin: 0;
   padding: 0;
-  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 body {
   background: white;//@mentorme-gradient-background;
-  //background: red;
   color: @mentorme-color-primary;
   font-family: "Century Gothic", "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  //position:relative;
 }
 
 a {
@@ -30,33 +29,15 @@ a {
 
 }
 
-.mk_container{
-  margin:0 auto;
+.container{
+  width: 100%;
 }
-
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -60px;
-}
-
 
 @import '../components/common/Navigations/Navigations';
 @import '../components/common/Footer/Footer';
 @import '../components/TabContent/SectionHero';
 @import '../components/TabContent/TabContentContainer';
+
 @import '../components/TabContent/SectionAbout';
 @import '../components/TabContent/SectionGallery';
 @import '../components/TabContent/SectionAsk';

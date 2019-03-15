@@ -15,21 +15,27 @@ module.exports = function(grunt) {
           engine: 'im',
           sizes: [{
             width: 1600,
-            suffix: "_large_2x",
+            suffix: "_1600",
             quality: 60
-          },{
+          },
+		  {
+			  width: 1200,
+			  suffix: "_1200",
+			  quality: 60
+		  },
+          {
 			  width: 800,
-			  suffix: "_large_1x",
+			  suffix: "_800",
 			  quality: 60
 		  },{
 			  name: '500',
 			  width: 500,
-			  suffix: '_medium',
+			  suffix: '_500',
 			  quality: 60
 		  },{
 			  name: '300',
 			  width: 300,
-			  suffix: '_small',
+			  suffix: '_300',
 			  quality: 60
 		  }]
         },
@@ -48,20 +54,20 @@ module.exports = function(grunt) {
     },
 
     /* Clear out the images directory if it exists */
-    clean: {
-      dev: {
-        src: ['docs/images'],
-      },
-    },
+    // clean: {
+    //   dev: {
+    //     src: ['docs/images'],
+    //   },
+    // },
 
     /* Generate the images directory if it is missing */
-    mkdir: {
-      dev: {
-        options: {
-          create: ['docs/images']
-        },
-      },
-    },
+    // mkdir: {
+    //   dev: {
+    //     options: {
+    //       create: ['docs/images']
+    //     },
+    //   },
+    // },
 
     /* Copy the "fixed" images that don't go through processing into the images/directory */
     copy: {
@@ -77,18 +83,18 @@ module.exports = function(grunt) {
   });
   
   grunt.loadNpmTasks('grunt-responsive-images');
-  grunt.loadNpmTasks('grunt-contrib-clean');
+  // grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-mkdir');
+  // grunt.loadNpmTasks('grunt-mkdir');
   //grunt.registerTask('default', ['clean', 'mkdir', 'copy']);
-  grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'responsive_images']);
+  // grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'responsive_images']);
+  grunt.registerTask('default', [ 'copy', 'responsive_images']);
 
 };
 
 
 /*
 module.exports = function(grunt){
-	
 	grunt.initConfig({
 		responsive_images: {
 			dev: {
