@@ -1,26 +1,24 @@
+.tab-content.mentor{
+  justify-content:flex-start;
+  background: white;
+}
+
 .gallery-card-container {
     background:white;
-    margin-top: @marginOffsetOneRow;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-content: center;
-    //overflow-x: hidden;
     width: 100%;
 
     .gallery-card {
       display: flex;
       flex-direction: column;
-      margin: 4px;
-      padding-bottom: 20px;
       border-radius: 6px;
       width: 100%;
-      @media @md{
 
-      }
       img {
-        height: 100%;
-        max-width: 300px;
+        width:100%;
       }
       .gallery-card-meta {
         color: white;
@@ -29,6 +27,7 @@
 
         h3{
           color: @mentorme-color-primary;
+          font-size:2.2rem;
         }
         p{
           margin:0;
@@ -36,6 +35,7 @@
           color:@mentorme-color-darkgrey;
           line-height: 1.3em;
           text-align: justify;
+          font-size:1.5rem;
         }
         i{
           font-size: 1em;

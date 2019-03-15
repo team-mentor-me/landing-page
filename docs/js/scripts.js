@@ -30,15 +30,13 @@ sectionTab.forEach((tab, idx) => {
 		let contentTabEl = document.querySelectorAll(contentTabId)[0]
 		let offset;
 		event.preventDefault();
-		// The home page only have one level
 		if(idx === 0){
-			offset = contentTabEl.offsetTop  -  tabContainerHeight + 2;
-		}else{
-			offset = contentTabEl.offsetTop  - tabContainerHeight - logoHeight + 2 ;
-		}
+			offset = contentTabEl.offsetTop -  tabContainerHeight + 2;
+	      }else{
+		 offset = contentTabEl.offsetTop  - tabContainerHeight - logoHeight + 2 ;
+	     }
 	
 		activeTab = tab;
-		// let scrollTop = contentTabEl.offsetTop - tabContainerHeight - logoHeight + activeTabHeight;
 		$('html, body').animate({ scrollTop: offset }, 600);
 		setActiveTabIndicator()
 	})

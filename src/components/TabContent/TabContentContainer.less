@@ -1,76 +1,78 @@
 
 
 .tab-content-container{
-	height: @full-height;
-	//margin-top: calc(57px);
-}
-.tab-content  {
-	height:100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-	background: white;
-	text-align: center;
-	padding:0 1.2em;
-	color:@mentorme-color-darkgrey;
-	background : linear-gradient(82deg, rgba(@mentorme-color-primary, 0.6), rgba(#5574F7, 0.6), rgba(#60C3FF, 0.8), rgba(@mentorme-color-primary, 0.8) );
-}
-  .aboutMentorApp{
-	.img-container{
-		display: flex;
+	height:calc(100vh - 76px);
+	.tab-content  {
 		width:100%;
-        overflow-x: hidden;
-		max-width: 1200px;
-		transform: scale(0.3);
+		height:100%;
+		display: flex;
+		flex-direction: column;
 		justify-content: center;
-
-        @media @md{
-          transform: scale(0.8);
-        }
-        @media @mdm{
-          transform: scale(0.8);
-        }
-        @media @mdl{
-          transform: scale(0.8);
-        }
-        @media @lg{
-          transform: scale(0.8);
-        }
-        @media @xlg{
-          transform: scale(0.8);
-        }
-        img{
-          height: 100%;
-          border-radius: 10px;
-          //margin-left: -2em;
-        }
-	}
-
-	.copy{
-		h1{
-			margin-top: 0;
-			margin-bottom:1em;
-		}
-		p{
-			color: white;
-			padding: 0 2em;
-		}
-	}
-
-	button.btn-mentor{
-		padding: 18px 70px;
-		margin: 30px;
-		border-radius: 6px;
+		position: relative;
 		background: white;
-		color: @mentorme-color-primary;
-		font-weight: bold;
+		text-align: center;
+		color:@mentorme-color-darkgrey;
+		background : linear-gradient(82deg, rgba(@mentorme-color-primary, 0.6), rgba(#5574F7, 0.6), rgba(#60C3FF, 0.8), rgba(@mentorme-color-primary, 0.8) );
 
-		&.blue{
-			color: white;
-			background-color: @mentorme-color-primary;
+		&.aboutMentorApp{
+			padding-top: 87px;
+		}
+		.img-container{
+			display: flex;
+			transition: all 0.3s ease;
+			justify-content: center;
+			align-items:center;
+			overflow:hidden;
+			width: 100%;
+			img{
+				width: 70%;
+				//transform: scale(0.7);
+				height:auto;
+			}
+			.card{
+				width: 100%;
+				border-radius: 10px;
+				//margin-left: -2em;
+				@media screen and (min-width: 300px) {
+					margin-left: 0;
+				}
+			}
+		}
+
+		.copy{
+			h1{
+				margin-top: 0;
+				margin-bottom:1em;
+			}
+			p{
+				color: white;
+				padding: 0 2em;
+			}
+		}
+
+		.btn-mentor{
+			padding: 18px 70px;
+			margin: 4px 20px;
+			border-radius: 6px;
+			background: white;
+			color: @mentorme-color-primary;
+			font-weight: bold;
+
+			&.blue{
+				color: white;
+				background-color: @mentorme-color-primary;
+			}
 		}
 	}
 }
 
+
+@media screen and (min-width: 400px) {
+	.hero_section {
+		background-image: url("/images/background_image_hero-800_large_1x");
+	}
+	.hero-section-container .hero-headline {
+		font-size: 36px;
+		color: white;
+	}
+}
