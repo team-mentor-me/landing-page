@@ -1,10 +1,12 @@
 @import './variables';
 @import './mixins';
-//@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
-
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 html, body {
@@ -13,8 +15,7 @@ html, body {
 }
 
 body {
-  background: white;//@mentorme-gradient-background;
-  //background: red;
+  background: white;
   color: @mentorme-color-primary;
   font-family: "Century Gothic", "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -28,14 +29,15 @@ a {
 
 }
 
-.mk_container{
-  margin:0 auto;
+.container{
+  width: 100%;
 }
 
 @import '../components/common/Navigations/Navigations';
 @import '../components/common/Footer/Footer';
-@import '../components/SectionHero/SectionHero';
+@import '../components/TabContent/SectionHero';
 @import '../components/TabContent/TabContentContainer';
+
 @import '../components/TabContent/SectionAbout';
 @import '../components/TabContent/SectionGallery';
 @import '../components/TabContent/SectionAsk';

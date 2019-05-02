@@ -1,24 +1,24 @@
-#tab-content-mentor {
-    background:white;
+.tab-content.mentor{
+  justify-content:flex-start;
+  background: white;
 }
-  .gallery-card-container {
-    margin-top: calc(76px);
+
+.gallery-card-container {
+    background:white;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-content: center;
+    width: 100%;
+
     .gallery-card {
       display: flex;
-      justify-content: center;
       flex-direction: column;
-      margin: 4px;
-      padding-bottom: 20px;
       border-radius: 6px;
-      max-width: 500px;
+      width: 100%;
+
       img {
-        max-height: 300px;
-        height: auto;
-        width: auto;
+        width:100%;
       }
       .gallery-card-meta {
         color: white;
@@ -27,6 +27,7 @@
 
         h3{
           color: @mentorme-color-primary;
+          font-size:2.2rem;
         }
         p{
           margin:0;
@@ -34,6 +35,7 @@
           color:@mentorme-color-darkgrey;
           line-height: 1.3em;
           text-align: justify;
+          font-size:1.5rem;
         }
         i{
           font-size: 1em;

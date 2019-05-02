@@ -1,8 +1,28 @@
 @mentorme-color-primary:#5887F9;
+@mentorme-color-purple:#5574F7;
+@mentorme-color-blue:#60C3FF;
 @mentorme-color-white:#ffffff;
 @mentorme-color-black:#2B2F3B;
 @mentorme-color-darkgrey:#4C5264;
 @mentorme-color-lighergrey:#BCC5D3;
 @mentorme-color-lightgrey:#E2E8ED;
 
-@mentorme-gradient-background: linear-gradient(82deg, #60C3FF, #5574F7);
+@mentorme-gradient-background: linear-gradient(82deg, @mentorme-color-blue, @mentorme-color-purple);
+
+// Mobile var
+@md:~"(min-width:300px)";
+@mdm:~"(min-width:450px)";
+@mdl:~"(min-width:600px)";
+@lg:~"(min-width:780px)";
+@lgm:~"(min-width:950px)";
+@xlg:~"(min-width:1200px)";
+
+// Small Size
+@headerHeight:76px;
+@bottomHeight:76px;
+@activeTabHeight:0;
+@browserMenuHeight: 56px;
+@marginOffsetOneRow: @headerHeight;
+@marginOffsetTwoRow: @headerHeight + @bottomHeight;
+
+@full-height: calc(100vh - @headerHeight - @bottomHeight);

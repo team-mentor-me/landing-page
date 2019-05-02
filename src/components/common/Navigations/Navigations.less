@@ -1,5 +1,5 @@
 header{
-    height: 78px;
+    height: @marginOffsetOneRow;
     background: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     display:flex;
@@ -8,16 +8,18 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    padding: 2px 1em 0  1em;
-    z-index: 2;
+    padding: 0 0.8em;
+    z-index: 20;
     .mk_header__logo{
-
+        padding-top:2px;
+        transition:all 0.3s ease;
         img{
-            width:75px;
-            height:75px;
-            border-radius: 10%;
-
+            width:74px;
+            height:74px;
             color:white;
+        }
+        &:hover{
+             transform:translateX(8px);
         }
     }
     .nav-item-login{
@@ -25,10 +27,20 @@ header{
         background-color: rgb(88,135,249);//@mentorme-color-primary;
         border-radius: 6px;
         padding: 12px 15px;
-        color: white;//@mentorme-color-primary;//@mentorme-color-darkgrey;
 
+        a{
+          color:white;
+        }
         i{
+           margin-right:0;
+           display:none;
+            @media @mdm{
+              display:inline-block;
+            }
             margin-left: 8px;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
         }
     }
 
@@ -36,24 +48,105 @@ header{
         display:flex;
         align-items: center;
         a{
+            //color:@mentorme-color-darkgrey;
             margin:1rem;
+            font-size: 1.6rem;
+            font-weight:bolder;
+            @media @md{
+                font-size:1.6rem;
+            }
+            @media @mdm{
+                font-size:1.6rem;
+            }
+            @media @lg{
+                font-size:1.7rem;
+            }
+            @media @lgm{
+                font-size:1.9rem;
+            }
+            @media @xlg{
+                font-size:2rem;
+            }
         }
+    }
+
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px @mentorme-color-primary, 0 0 40px @mentorme-color-primary, 0 0 50px @mentorme-color-primary, 0 0 60px @mentorme-color-primary, 0 0 70px @mentorme-color-primary;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px @mentorme-color-primary, 0 0 40px @mentorme-color-primary, 0 0 50px @mentorme-color-blue, 0 0 60px @mentorme-color-primary, 0 0 70px @mentorme-color-primary, 0 0 80px @mentorme-color-blue;
     }
 }
 
+// Bottom Nav
 .bottom-nav{
+    position: absolute;
     display: flex;
     justify-content: space-around;
     align-items:center;
-    position:absolute;
     width: 100%;
-    height: 75px;
-    bottom: 0;
+    height: @marginOffsetOneRow;
+    bottom: 0px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     background: white;
     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: 10;
+
+    &.top-position{
+        top:@marginOffsetOneRow;
+        position:fixed;
+    }
     a{
         font-weight: bolder;
         font-size: 0.9rem;
+        height:100%;
     }
+
+    .section-tab{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        color: @mentorme-color-darkgrey;
+        letter-spacing: 0.1rem;
+        transition: all 0.5s ease;
+        text-align: center;
+        font-size: 1.6rem;
+        padding:0 4px;
+        &:hover {
+            color:white;
+            background: rgba(102,177,241,0.8);
+            transition: all 0.5s ease;
+        }
+
+        font-weight:bolder;
+        @media @md{
+            font-size:1.6rem;
+        }
+        @media @mdm{
+            font-size:1.7rem;
+        }
+        @media @lg{
+            font-size:1.7rem;
+        }
+        @media @lgm{
+            font-size:1.9rem;
+        }
+        @media @xlg{
+            font-size:2rem;
+        }
+    }
+    .section-tab-active {
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 6px;
+        background:@mentorme-gradient-background;
+        transition: all 0.3s ease;
+    }
+
+
 }
